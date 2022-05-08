@@ -6,7 +6,8 @@
 a.social {
   margin: 0 1rem;
   transition: transform 250ms;
-  display: inline-block;
+  display: block;
+  margin-bottom: 15px;
 }
 
 a.social:hover {
