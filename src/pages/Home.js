@@ -67,14 +67,14 @@ class Home extends Component{
                  bg={'/images/dg6.png'}
                  prefix={""}
                  suffix={"%"}
-                 duration={2}
+                 duration={8}
                  />
                  <Counter minCount={-875.039} maxCount={160527.012} sty={{width:'150px',fontSize:'large',margin:'auto',fontFamily:'Times New Roamn',fontWeight:700,color:'blue',textAlign:'center'}} 
                  content={" More engages with customer than ever before.Happy customer , results in more Revenue ever before"}
                  bg={'https://c8.alamy.com/comp/2F749ET/flat-illustration-businessman-supporting-growth-in-economy-on-chart-graph-business-and-finance-concept-2F749ET.jpg'}
                  prefix={"INR "}
                  suffix={""}
-                 duration={3}
+                 duration={10}
                  decimal={4}
                  />
                </Grid>
