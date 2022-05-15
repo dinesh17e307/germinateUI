@@ -84,7 +84,7 @@ this.setState({
         return(
             <Grid style={{color:'grey',fontWeight:500,fontSize:'20px',margin:'20px'}}>
                 <Typography variant="h4" style={{color:'darkblue'}}>Get Your Quote</Typography>
-              Name of the Buisness / startup <TextField className={classes.inputContent} onChange={this.handleQuote} id="buisnessName"
+              Name of the Business / startup <TextField className={classes.inputContent} onChange={this.handleQuote} id="buisnessName"
               /> Email Address to get notification <TextField className={classes.inputContent} onChange={this.handleQuote} id="email"/> No of pages Required in your website<TextField inputMode='numeric' className={classes.inputContent} id ='pageNo'onChange={this.handleQuote} 
               /> Do you want content of your website by us?<RadioGroup style={{display:'block'}} onChange={this.handleQuote} id="content">
                   <FormControlLabel value="1" control={<Radio id="content"  style={{color:'green'}}/>} label="Yes" />

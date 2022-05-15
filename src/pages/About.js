@@ -14,7 +14,7 @@ class About extends Component{
               <Grid>
                   <Grid item>
                       <div style={{fontSize:'1.5rem',fontWeight:500,color:'black',display:'flex',fontFamily: 'Georgia serif'}}>
-                         <p> A journey towards </p>&nbsp;<TypeWriterEffect
+                         <p> A journey towards</p>&nbsp;<TypeWriterEffect
         textStyle={{
           fontFamily: 'Red Hat Display',
           color: '#2196f3',
@@ -45,7 +45,7 @@ class About extends Component{
                      
                   <Grid item lg={6} md={6} sm={12} xs={12} >
                       <p className={classes.heading}>Mission</p>
-                    <p className={classes.content}  >To create a better Buisness for the many <span style={{color:'#2196f3'}}>Entrepreneur</span></p>
+                    <p className={classes.content}  >To create a better Business for the many <span style={{color:'#2196f3'}}>Entrepreneur</span></p>
                    <p className={classes.content} > For customers but also for our co-workers and the people who work at our<span style={{color:'#2196f3'}}> Marketing</span> </p> 
                    <p className={classes.content}>To deliver a good quality of <span  style={{color:'#2196f3'}}>Products</span></p>
                    <p className={classes.content}>Design is more than what it looks like and feels like. Design is how it works</p>

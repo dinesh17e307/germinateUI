@@ -153,14 +153,14 @@ openQuoteModal=()=>{
         startDelay={1000}
         cursorColor="#3f51b5"
         multiText={[
-          'Single platform to Your Buisness'
+          'Single platform to Your Business'
           
         ]}
         multiTextDelay={1000}
         typeSpeed={30}
       />
-      <p className={classes.content}>Get static Website for your startup/buisness </p>
-      <p className={classes.content}>Get Customised website for your buisness/startup</p>
+      <p className={classes.content}>Get static Website for your startup/business </p>
+      <p className={classes.content}>Get Customised website for your business/startup</p>
       <p className={classes.content}>Single Platform for all of your communication</p>
    
       </Grid>

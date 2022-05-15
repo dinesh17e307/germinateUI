@@ -49,7 +49,7 @@ class Designs extends Component{
               />
               </Grid>
               <Grid  item style={{marginTop:'15px'}}>
-              <TextField label="Company/Buisness Name"  variant='outlined' fullWidth
+              <TextField label="Company/Business Name"  variant='outlined' fullWidth
               />
               </Grid>
               <Grid  item style={{marginTop:'15px'}}>
