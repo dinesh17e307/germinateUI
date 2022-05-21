@@ -5,9 +5,10 @@ import {Card,CardContent,CardMedia,Typography,Modal} from '@mui/material'
 import withStyles from '@material-ui/core/styles/withStyles';
 import { InputLabel,Radio,RadioGroup,TextField,FormControlLabel, Button } from '@material-ui/core';
 import Requeststyles from './Styles/RequestStyles';
+import {baseurl} from '../utils'
 // import SendMail from '../Server/QuoteMail/SendMail'
 import axios from 'axios';
-
+axios.defaults.baseURL = 'https://germinateserver.herokuapp.com';
 let users = []
 class ConversationalQuote extends Component{
     state={
@@ -73,7 +74,8 @@ this.setState({
         email:email
     }
        )
-       axios.post('/sendQuoteMail',users)
+
+       axios.post(`/sendQuoteMail`,users)
        this.setState({
            totalQuote:totalQuote
        })

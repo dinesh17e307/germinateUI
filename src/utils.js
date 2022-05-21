@@ -1,0 +1,1 @@
+export const baseurl='https://germinateserver.herokuapp.com'

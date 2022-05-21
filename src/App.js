@@ -50,7 +50,7 @@ function App() {
      <div style={{minHeight:'300px',backgroundColor:'rgb(12 12 12)',overflow:'hidden',marginBottom:'20px'}}>
        <Grid item > <img style={{marginTop:'-55px'}}src='/images/logo1.png' width={200} /></Grid>
       <Grid container style={{display:'flex',justifyContent:'space-around',color:'white',marginTop:'-55px'}}>
-        <Grid item lg={2} sm={6} xs={12} md={4} >
+        <Grid item lg={2} sm={6} xs={12} md={4} style={{marginLeft:'15px'}}>
         <p  className="Grid1" ><a className="touchlinkfooter" href="/">Home</a></p>
         <p className="Grid1"><a className="touchlinkfooter" href="/design">WebsiteDesign</a></p>
         <p  className="Grid1"><a className="touchlinkfooter" href="/request">Request your desire</a></p>
@@ -60,7 +60,7 @@ function App() {
  To give a Quality of products to customer , being a small startup quality will sounds 
 </Grid>
 <Grid item lg={4} sm={6} xs={12} md={4}>
- <ShareOption/>
+ 
 </Grid>
       </Grid>
       <p style={{color:'white',fontWeight:500,textAlign:'center'}}>@teamgerminate-2022</p>
