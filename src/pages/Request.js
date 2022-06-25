@@ -9,7 +9,7 @@ import CoversationalQuote from '../Components/CoversationalQuote';
 import Slider from "react-slick";
 import Requeststyles from '../Components/Styles/RequestStyles';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:8080/';
+axios.defaults.baseURL = 'https://germinateserver.herokuapp.com';
 const BannerImages=['dg5.jpg','dg6.png']
 // import Requeststyles from '../Styles/DesignStyles';
 

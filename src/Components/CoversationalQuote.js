@@ -8,7 +8,7 @@ import Requeststyles from './Styles/RequestStyles';
 import {baseurl} from '../utils'
 // import SendMail from '../Server/QuoteMail/SendMail'
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = 'https://germinateserver.herokuapp.com';
 let users = []
 class ConversationalQuote extends Component{
     state={
