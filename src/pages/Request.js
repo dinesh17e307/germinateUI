@@ -53,7 +53,7 @@ class Designs extends Component{
         return (
             <>
             
-            <Grid item style={{margin:'10px 50px',justifyContent:'center'}}>
+            <Grid item style={{margin:'10px auto',justifyContent:'center'}}>
                    
                 <Grid container >
                     <Grid item lg={6} md={6} xs={12} sm={12} >
