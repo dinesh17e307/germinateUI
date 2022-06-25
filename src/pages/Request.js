@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
 import Grid from '@mui/material/Grid';
 import Hidden from '@mui/material/Hidden'
-import {Card,CardContent,CardMedia,Typography,Modal,TextField,NativeSelect} from '@mui/material'
+import Card from '@mui/material/Card';
+import {CardContent,CardMedia,Typography,Modal,TextField,NativeSelect } from '@mui/material'
 import withStyles from '@material-ui/core/styles/withStyles';
-import { Button, InputLabel, ListItem, MenuItem } from '@material-ui/core';
+import { Button, InputLabel, ListItem, MenuItem ,} from '@material-ui/core';
 import CoversationalQuote from '../Components/CoversationalQuote';
 import Slider from "react-slick";
 import Requeststyles from '../Components/Styles/RequestStyles';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:8080/';
 const BannerImages=['dg5.jpg','dg6.png']
 // import Requeststyles from '../Styles/DesignStyles';
+
 class Designs extends Component{
    onFileChange=(file)=>{
        console.log(file)
-   }
+    }
+    handleChange = (event) =>
+    {
+        let id = event.target.id;
+        let value = event.target.value;
+        this.setState({
+            [id]:value
+        })
+    }
    renderSlides = () => {
     const { classes } = this.props;
     return BannerImages.map((image, indx) => (
@@ -24,68 +36,61 @@ class Designs extends Component{
         />
       </div>
     ));
-  };
+    };
+    sendMessage = () =>
+    {
+        let users = [{
+            Custemail: this.state.email,
+            message: this.state.message,
+            email: 'dheena5880@gmail.com',
+            temp:'sendMessage'
+        }]
+        axios.post(`/sendQuoteMail`,users)
+    }
     render(){
         const{classes}=this.props;
         console.log(this.props)
-        return(
-            <Grid item style={{margin:'10px auto',justifyContent:'center'}}>
+        return (
+            <>
+            
+            <Grid item style={{margin:'10px 50px',justifyContent:'center'}}>
+                   
                 <Grid container >
-                    <Grid item lg={6} md={6} xs={12} sm={12}>
+                    <Grid item lg={6} md={6} xs={12} sm={12} >
                         <CoversationalQuote/>
                     </Grid>
-                    <Grid item lg={6} md={6} xs={12} sm={12}>
-                        <Typography style={{color:'darkblue',fontWeight:500,fontSize:'20px'}}>Register to get Authentication</Typography>
+                        
+                    <Grid item lg={6} md={6} xs={12} sm={12} style={{marginBottom:'25px'}}>
+                             <Card style={{width:'100%',boxShadow:'2px 3px 5px 10px lightgrey',zIndex:'1',position:'relative'}}>
+                                <CardContent>
+                                    <div style={{backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',backgroundImage:"url('images/email1.gif')",opacity:'0.2',width:'100%',height:'100%',zIndex:'-1',position:'absolute'}}></div>
+                    
+                        <Typography style={{color:'red',fontWeight:500,fontSize:'20px'}}>Drop Your Valuable Thoughts</Typography>
                     <Grid  item style={{marginTop:'15px'}}>
-              <TextField  inputProps={{style:{
+              <TextField onChange={this.handleChange} id="email" inputProps={{style:{
                            fontSize:'16px',
                            fontWeight:500,
-                           color:'CaptionText'
+                           
+                  color: 'CaptionText'
+                           
               }}} label="Email Address" placeholder='germinate@gmail.com' variant='outlined' fullWidth
               />
               </Grid>
               <Grid  item style={{marginTop:'15px'}}>
-              <TextField label="Phone Number" maxLength="10" variant='outlined' fullWidth
+              <TextField label="Text Your Message" id="message" onChange={this.handleChange} multiline  maxRows={5} variant='outlined' fullWidth
               />
-              </Grid>
-              <Grid  item style={{marginTop:'15px'}}>
-              <TextField label="Company/Business Name"  variant='outlined' fullWidth
-              />
-              </Grid>
-              <Grid  item style={{marginTop:'15px'}}>
-              <TextField label="Short Description about your buiness" multiline  maxRows={5} variant='outlined' fullWidth
-              />
-              </Grid>
-              <Grid item style={{marginTop:'15px'}}>
-                  <NativeSelect fullWidth variant='outlined'>
-                      <option>Static</option>
-                       <option>Custom</option>
-                  </NativeSelect>
-              </Grid>
-               <Grid item style={{marginTop:'15px'}}>
-                  <TextField label="Reference Site" variant='outlined' fullWidth
-              />
-                 
-              </Grid>
-              <Grid item style={{marginTop:'15px'}}>
-                  <InputLabel style={{marginBottom:'15px'}}>If you want to your website to be in your own content ,please upload content</InputLabel>
-                  <input type="file" onChange={this.onFileChange} />
-                 
-              </Grid>
-              <Grid item style={{marginTop:'15px'}}>
-                  <InputLabel style={{marginBottom:'15px'}}>Please upload basic Details of company below </InputLabel>
-                  <ListItem style={{color:'#3f51b5'}}>Email</ListItem>
-                  <ListItem style={{color:'#3f51b5'}}>Facebook,twitter,instgram & other social Media links</ListItem>
-                  
-                  <input type="file" onChange={this.onFileChange} />
-                 
               </Grid>
               <Grid style={{textAlign:'center',marginTop:"15px"}}>
-                  <Button variant='contained' color='primary'>Confirm</Button>
-              </Grid>
+                  <Button variant='contained' color='primary' onClick={this.sendMessage}>Send Message</Button>
+                                </Grid>
+                           </CardContent>
+                    </Card>      
               </Grid>
               
-                   </Grid>
+                        </Grid>
+                       
 <Grid container >
                   <img src="images/design4.gif" width={300}/>
                   <img src="images/design7.gif" width={300}/>
@@ -93,6 +98,7 @@ class Designs extends Component{
                   <img src="images/design8.gif" width={300}/>
                   </Grid>
                </Grid>
+               </>
         )
     }
 }
