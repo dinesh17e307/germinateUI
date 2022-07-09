@@ -103,7 +103,7 @@ window.open("https://my-income-fbd33.web.app",'_blank')
                <Grid container xs={12} style={{marginTop:'15px'}}>
                         
                         <Grid item md={6} lg={6} sm={12} xs={12}>
-                            <img src="/products/comlogo1.png"  />
+                            <img src="/Products/comlogo1.png"  />
                             
                         </Grid>
                         <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>

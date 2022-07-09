@@ -143,7 +143,7 @@ const navigates=(text)=>{
             <img src="/images/logo1.png" width='100%'/>
         </Grid>
         <List>
-          {[{label:'Home',id:'home'}, {id:"design",label:"Website Designs"}, {id:"Request",label:'Request'}, {id:"about",label:'About us'}].map((text, index) => (
+          {[{label:'Home',id:'home'}, {id:"design",label:"Products"}, {id:"Request",label:'Request'}, {id:"about",label:'About us'}].map((text, index) => (
             <ListItem button key={text.id}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text.label} onClick={()=>navigates(text)} />
