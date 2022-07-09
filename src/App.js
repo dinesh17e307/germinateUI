@@ -53,7 +53,7 @@ function App() {
       <Grid container style={{display:'flex',justifyContent:'space-around',color:'white',marginTop:'-55px'}}>
         <Grid item lg={2} sm={6} xs={12} md={4} style={{marginLeft:'15px'}}>
         <p  className="Grid1" ><a className="touchlinkfooter" href="/">Home</a></p>
-        <p className="Grid1"><a className="touchlinkfooter" href="/design">WebsiteDesign</a></p>
+        <p className="Grid1"><a className="touchlinkfooter" href="/design">Products</a></p>
         <p  className="Grid1"><a className="touchlinkfooter" href="/request">Request your desire</a></p>
         <p  className="Grid1"><a className="touchlinkfooter" href="/about">About us</a></p>
         </Grid>
