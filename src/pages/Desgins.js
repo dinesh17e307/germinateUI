@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Grid from '@mui/material/Grid';
 import Hidden from '@mui/material/Hidden'
-import {Card,CardContent,CardMedia,Typography,Button,Modal} from '@mui/material'
+import {Card,CardContent,CardMedia,Typography,Button,Modal, ListItem, ListItemText} from '@mui/material'
 import withStyles from '@material-ui/core/styles/withStyles';
 import DesignCard from '../Components/DesignCard/Designs'
 import TypeWriterEffect from 'react-typewriter-effect';
@@ -62,7 +62,10 @@ openQuoteModal=()=>{
         openQuote:true
     })
 }
-
+    navigateToUzhalavan = () =>
+    {
+window.open("https://my-income-fbd33.web.app",'_blank')
+}
     render(){
         const{classes}=this.props;
         return(
@@ -89,7 +92,7 @@ openQuoteModal=()=>{
         startDelay={100}
         cursorColor="#3f51b5"
         multiText={[
-          'Static Website Designs'
+          'Our Products'
           
         ]}
         multiTextDelay={1000}
@@ -98,18 +101,40 @@ openQuoteModal=()=>{
                 </Grid>
                 <Zoom>
                <Grid container xs={12} style={{marginTop:'15px'}}>
-                  {
-                      designs.map(item=>{
-                          return(
-                              <DesignCard   img={item.img}  />
-                          )
-                      })
-                  } 
+                        
+                        <Grid item md={6} lg={6} sm={12} xs={12}>
+                            <img src="products/comLogo1.png"  />
+                            
+                        </Grid>
+                        <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>
+                            <ListItem>
+                                <ListItemText>
+                                   Ease to Know your Stats..
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                  Things are more easier than your expert
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                  Complicated Things changes to more simple ,Easy use
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                <Button variant='outlined' onClick={this.navigateToUzhalavan } >Visit us</Button>
+                               </ListItemText>
+                               
+                            </ListItem>
+                            
+                        </Grid>
                </Grid>
                </Zoom>
-               <Grid item className={classes.content}>
-                   Above given Designs are samples of Static web designs, Designs may vary with respect to the need of the customers 
-               </Grid>
                <hr style={{marginTop:'35px'}}/>
                 <Grid container>
                    

@@ -84,7 +84,7 @@
   text-decoration:none !important;
 }
 .touchlink:any-link:hover{
-  font-size: 18px;
+  
   color: #17a3e7;
   cursor: pointer;
 

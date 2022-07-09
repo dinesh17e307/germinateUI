@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route, Routes,Link} from "react-router-dom";
+import React from'react'
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import './App.css';
-import Home from "./pages/Home";
+
 import About from './pages/About'
 import WebsiteDesign from'./pages/Desgins'
 import Request from "./pages/Request";
-import {Card,CardContent,CardMedia,Typography,Button} from '@mui/material'
+
+
 import { Hidden,Grid } from "@material-ui/core";
 import AppDrawer from './Components/AppDrawer'
-import ShareSocialMedia from "./Components/Slider/ShareOption";
-import ShareOption from "./Components/Slider/ShareOption";
+const Home=React.lazy(()=>import('./pages/Home'))
 function App() {
   return (
     <div div className='page-container'>
@@ -20,7 +21,7 @@ function App() {
         <Hidden smDown>
         <div className='linkHeader' style={{flex:3,display:'flex',justifyContent:'space-evenly'}}>
              <p ><a className='touchlink' href="/">Home</a></p>
-              <p><a href="/design" className='touchlink'>Website Designs</a></p>
+              <p><a href="/design" className='touchlink'>Products</a></p>
              <div className='container'>
              <p><a href="/request" className='touchlink'>Request your desire</a></p>
             <marquee  direction = "left"  style={{fontSize:'12px',fontWeight:600,color:'#8142af'}}>get your Quote</marquee>
