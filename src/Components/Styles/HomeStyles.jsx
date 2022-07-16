@@ -2,7 +2,7 @@ import { fontSize } from "@mui/system";
 
 const Homestyles=(theme)=>({
 content:{
-  fontSize:'20px',
+  fontSize:'16px',
   fontWeight:500,
   color:'grey',
   marginTop:'20px !important'

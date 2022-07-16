@@ -28,7 +28,7 @@ ViewDesign:{
   }
 },
 content:{
-  fontSize:'20px',
+  fontSize:'16px',
   fontWeight:500,
   color:'grey',
   marginTop:'20px !important'

@@ -31,12 +31,12 @@ class Home extends Component{
                  <Grid container lg={12} md={12} xs={12}>
                      <Grid item lg={6} md={6} xs={12} style={{width:'100%',}}>
                          
-                         <p style={{fontSize:'30px',}}><TypeWriterEffect
+                         <p style={{fontSize:'20px',}}><TypeWriterEffect
         textStyle={{
           fontFamily: 'Red Hat Display',
           color: '#2196f3',
           fontWeight: 500,
-          fontSize: '1.5em',
+          fontSize: '1em',
         }}
         startDelay={100}
         cursorColor="#3f51b5"
