@@ -65,7 +65,11 @@ openQuoteModal=()=>{
     navigateToUzhalavan = () =>
     {
 window.open("https://my-income-fbd33.web.app",'_blank')
-}
+    }
+    navigateToBurgerBuilder = () =>
+    {
+        window.open("https://burgerbuilder-31974.web.app/",'_blank')
+    }
     render(){
         const{classes}=this.props;
         return(
@@ -128,6 +132,44 @@ window.open("https://my-income-fbd33.web.app",'_blank')
                             <ListItem>
                                 <ListItemText>
                                 <Button variant='outlined' onClick={this.navigateToUzhalavan } >Visit us</Button>
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                
+                            </ListItem>
+                        </Grid>
+               </Grid>
+                </Zoom>
+                                <Zoom>
+               <Grid container xs={12} style={{marginTop:'15px'}}>
+                        
+                        <Grid item md={6} lg={6} sm={12} xs={12}>
+                            <img src="/Products/burgerlogo.png" width="70%" />
+                            
+                        </Grid>
+                        <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>
+                            <ListItem>
+                                <ListItemText>
+                                   To order your virtual Burger.....
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                  Everthing goes in virtual, why not burger......
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                  Get your food website too , Everthing on website 
+                               </ListItemText>
+                               
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText>
+                                <Button variant='outlined' onClick={this.navigateToBurgerBuilder } >Visit us</Button>
                                </ListItemText>
                                
                             </ListItem>
