@@ -1,1 +1,1 @@
-export const baseurl='https://germinateserver.herokuapp.com'
+export const baseurl='https://germinateapi.onrender.com'
