@@ -37,6 +37,11 @@ content:{
   fontWeight:500,
   color:'#d50000',
   marginTop:'20px !important'
+  },
+  desc: {
+  fontSize:'16px',
+  fontWeight:500,
+  color:'#d50000',
 }
 })
  

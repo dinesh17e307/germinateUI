@@ -13,6 +13,7 @@ Roll} from 'react-reveal'
 import Homestyles from '../Components/Styles/HomeStyles';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Counter from '../Components/Counter';
+import AddPage from './AddPage';
 const custQuotes=[
   'Customer Interaction in your Absence',"Customer's compatability"
 ,'Ease of Getting More information','Reach of business Tremendously']
@@ -162,7 +163,13 @@ class Home extends Component{
                </Grid>
                </Grid>
                </Grid>
-               </Fade>
+            </Fade>
+            <Grid item lg={12} md={12} xs={12}>
+                   <p className={classes.heading}>Our Affiliate Links </p>
+               </Grid>
+             <Grid item lg={12} md={12} xs={12}>
+                   <AddPage/>
+               </Grid>
                <Grid item lg={12} md={12} xs={12}>
                    <p className={classes.heading}>Our Clients !!</p>
                </Grid>

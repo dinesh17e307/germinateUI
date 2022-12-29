@@ -9,7 +9,9 @@ import Request from "./pages/Request";
 
 import { Hidden,Grid } from "@material-ui/core";
 import AppDrawer from './Components/AppDrawer'
-const Home=React.lazy(()=>import('./pages/Home'))
+import AdHtml from './pages/AdHtml';
+const Home = React.lazy(() => import('./pages/Home'))
+const adsArray=[]
 function App() {
   return (
     <div div className='page-container'>
@@ -43,7 +45,7 @@ function App() {
          <Route  path="/design" element={<WebsiteDesign/>}/>
          <Route exact path="/request" element={<Request/>}/>
          <Route  path="/about" element={<About/>}/>
-         
+            <Route path="/ads" element={<AdHtml AdArray={adsArray } />}/>
          </Routes>
          </Router>
         
