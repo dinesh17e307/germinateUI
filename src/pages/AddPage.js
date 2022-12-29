@@ -110,7 +110,7 @@ window.open(link,'_blank')
                        let color = colorArray[random]
                        let color1=colorArray[random1]
                        return (
-                           <Grid item sm={6} xs={6} md={3}  >
+                           <Grid item sm={6} xs={12} md={3}  >
                                <Paper style={{ padding:'15px',cursor:'pointer' ,borderRadius:'5px',border:`1px solid${color}`}} onClick={()=>this.navigateToUzhalavan(item.link)}>
                                <Grid  style={{color:color1}}>
                                    <h2 >{item.name}</h2>
