@@ -25,7 +25,13 @@ class Home extends Component{
     render(){
       const {classes}=this.props;
         return(
-            <Grid container lg={12} md={12} xs={12} >
+          <Grid container lg={12} md={12} xs={12} >
+            <Grid item lg={12} md={12} xs={12}>
+                   <p className={classes.heading}>Our Affiliate Links </p>
+               </Grid>
+             <Grid item lg={12} md={12} xs={12}>
+                   <AddPage/>
+               </Grid>
                 <Fade top>
              <Grid item lg={12} md={12} xs={12} style={{marginBottom:'15px'}}>
                  
@@ -164,12 +170,7 @@ class Home extends Component{
                </Grid>
                </Grid>
             </Fade>
-            <Grid item lg={12} md={12} xs={12}>
-                   <p className={classes.heading}>Our Affiliate Links </p>
-               </Grid>
-             <Grid item lg={12} md={12} xs={12}>
-                   <AddPage/>
-               </Grid>
+            
                <Grid item lg={12} md={12} xs={12}>
                    <p className={classes.heading}>Our Clients !!</p>
                </Grid>
