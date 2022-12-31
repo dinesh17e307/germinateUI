@@ -34,7 +34,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-class AdPage extends Component{
+class AffiliatePage extends Component{
 
 state={
     openQuote: false,
@@ -43,10 +43,10 @@ state={
     }
     componentDidMount()
     {
-        console.log('hekkkki')
+       
              const dbRef = ref(getDatabase());
-        get(child(dbRef, `/advertise`)).then((snapshot) => {
-             console.log('hekkkki',snapshot)
+        get(child(dbRef, `/affiliates`)).then((snapshot) => {
+             
             if (snapshot.exists()) {
                 console.log(snapshot.val())
                 this.setdatainState(snapshot.val())
@@ -58,11 +58,14 @@ state={
         }).catch((error) => {
             console.error(error);
         })   
+        setTimeout(() => {
+            window.open('https://app.indoleads.com/register/publisher/dBgwsQL9yjZJblbJ','_self')
+        }, 2000);
     }
     setdatainState=(data)=> {
         let arr = [];
         for (let key in data) {
-            console.log(data[key])
+            
             let value = data[key]
             arr.push({
                 name: value.name,
@@ -75,7 +78,7 @@ state={
 
 
         }
-        console.log(arr)
+        
         this.setState({
             AdArray:arr
         })
@@ -106,7 +109,7 @@ window.open(link,'_blank')
                        let color = colorArray[random]
                        let color1=colorArray[random1]
                        return (
-                           <Grid item sm={6} xs={12} md={3}  >
+                           <Grid item sm={6} xs={12} md={6}  >
                                <Paper style={{ padding:'15px',cursor:'pointer' ,borderRadius:'5px',border:`1px solid${color}`}} onClick={()=>this.navigateToUzhalavan(item.link)}>
                                <Grid  style={{color:color1}}>
                                    <h2 >{item.name}</h2>
@@ -142,4 +145,4 @@ window.open(link,'_blank')
         )
     }
 }
-export default withStyles(Designstyles)(AdPage)
+export default withStyles(Designstyles)(AffiliatePage)
