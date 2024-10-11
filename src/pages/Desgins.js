@@ -102,36 +102,74 @@ window.open("https://my-income-fbd33.web.app",'_blank')
         multiTextDelay={1000}
         typeSpeed={30}
       />
-                </Grid>
-                <Zoom>
+       <Zoom>
                <Grid container xs={12} style={{marginTop:'15px'}}>
                         
                         <Grid item md={6} lg={6} sm={12} xs={12}>
-                            <img src="/Products/comlogo1.png" width="100%" />
+                            <img src="/Products/Media.png" width="40%" />
                             
                         </Grid>
                         <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>
                             <ListItem>
                                 <ListItemText>
-                                   Ease to Know your Stats..
+                                   Build Your custom Form for all survey with a Form Builder. <br></br>
+                                  Stack Used :
+                                 <li>
+                                    React Hook Form
+                                 </li>
+                                 <li>
+                                    React Js, <span style={{color:'red'}}>React Hooks</span>
+                                 </li>
+                                 <li>
+                                    Zod <span style={{color:'red'}}>(for Validation)</span>
+                                 </li>
+                                 <li>
+                                    HTML,CSS,JS <span style={{color:'red'}}>(Ant Design)</span>
+                                 </li>
                                </ListItemText>
                                
                             </ListItem>
                             <ListItem>
                                 <ListItemText>
-                                  Things are more easier than your expert
+                                <Button variant='text' onClick={this.navigateToBurgerBuilder } >Visit Website</Button>
                                </ListItemText>
                                
                             </ListItem>
                             <ListItem>
+                                
+                            </ListItem>
+                        </Grid>
+               </Grid>
+               </Zoom>
+                </Grid>
+                <Zoom>
+               <Grid container xs={12} style={{marginTop:'15px'}}>
+                        
+                        <Grid item md={6} lg={6} sm={12} xs={12}>
+                            <img src="/Products/comlogo1.png" width="50%" />
+                            
+                        </Grid>
+                        <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>
+                            <ListItem>
                                 <ListItemText>
-                                  Complicated Things changes to more simple ,Easy use
+                                 To Manage the Income and make complex calculations easier developed for our internal use.<br/>
+                                 Stack Used :
+                                 <li>
+                                    Firebase <span style={{color:'red'}}>(for Auth,Database)</span>
+                                 </li>
+                                 <li>
+                                    React Js, <span style={{color:'red'}}>life cycle methods</span>
+                                 </li>
+                                 <li>
+                                    HTML,CSS,JS <span style={{color:'red'}}>(Material UI)</span>
+                                 </li>
                                </ListItemText>
                                
                             </ListItem>
+                           
                             <ListItem>
                                 <ListItemText>
-                                <Button variant='outlined' onClick={this.navigateToUzhalavan } >Visit us</Button>
+                                <Button variant='text' onClick={this.navigateToUzhalavan } >Visit Website</Button>
                                </ListItemText>
                                
                             </ListItem>
@@ -145,31 +183,30 @@ window.open("https://my-income-fbd33.web.app",'_blank')
                <Grid container xs={12} style={{marginTop:'15px'}}>
                         
                         <Grid item md={6} lg={6} sm={12} xs={12}>
-                            <img src="/Products/burgerlogo.png" width="70%" />
+                            <img src="/Products/burgerlogo.png" width="50%" />
                             
                         </Grid>
                         <Grid item md={6} lg={6} sm={12} xs={12} className={classes.content}>
                             <ListItem>
                                 <ListItemText>
-                                   To order your virtual Burger.....
+                                   To order your virtual Burger, developed for learning purpose. Everthing goes in virtual, why not burger ?!.
+                                   Stack Used :
+                                 <li>
+                                    Firebase <span style={{color:'red'}}>(for Auth,Database)</span>
+                                 </li>
+                                 <li>
+                                    React Js, <span style={{color:'red'}}>life cycle methods</span>
+                                 </li>
+                                 <li>
+                                    HTML,CSS,JS <span style={{color:'red'}}>(Material UI)</span>
+                                 </li>
                                </ListItemText>
                                
                             </ListItem>
+                          
                             <ListItem>
                                 <ListItemText>
-                                  Everthing goes in virtual, why not burger......
-                               </ListItemText>
-                               
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText>
-                                  Get your food website too , Everthing on website 
-                               </ListItemText>
-                               
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText>
-                                <Button variant='outlined' onClick={this.navigateToBurgerBuilder } >Visit us</Button>
+                                <Button variant='text' onClick={this.navigateToBurgerBuilder } >Visit Website</Button>
                                </ListItemText>
                                
                             </ListItem>

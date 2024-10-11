@@ -14,6 +14,7 @@ import Homestyles from '../Components/Styles/HomeStyles';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Counter from '../Components/Counter';
 import AddPage from './AddPage';
+import AffiliatePage from './AffiliatePage';
 const custQuotes=[
   'Customer Interaction in your Absence',"Customer's compatability"
 ,'Ease of Getting More information','Reach of business Tremendously']
@@ -27,10 +28,11 @@ class Home extends Component{
         return(
           <Grid container lg={12} md={12} xs={12} >
             <Grid item lg={12} md={12} xs={12}>
-                   <p className={classes.heading}>Our Affiliate Links </p>
+                   <p className={classes.heading}>Developed Products <span style={{color:'red'}}>(my skills)</span> </p>
                </Grid>
              <Grid item lg={12} md={12} xs={12}>
-                   <AddPage/>
+                   <AffiliatePage/>
+                   <hr/>
                </Grid>
                 <Fade top>
              <Grid item lg={12} md={12} xs={12} style={{marginBottom:'15px'}}>
@@ -171,9 +173,7 @@ class Home extends Component{
                </Grid>
             </Fade>
             
-               <Grid item lg={12} md={12} xs={12}>
-                   <p className={classes.heading}>Our Clients !!</p>
-               </Grid>
+              
                
             </Grid>
         )

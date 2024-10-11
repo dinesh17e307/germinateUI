@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import Grid from '@mui/material/Grid';
 import Hidden from '@mui/material/Hidden'
-import {Card,CardContent,CardMedia,Typography,Button,Modal, ListItem, ListItemText, Paper} from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Button, Modal, ListItem, ListItemText, Paper } from '@mui/material'
 import withStyles from '@material-ui/core/styles/withStyles';
 import DesignCard from '../Components/DesignCard/Designs'
 import TypeWriterEffect from 'react-typewriter-effect';
-import {Fade,
-Flip,
-Rotate,
-Zoom,
-Bounce,
-Roll} from 'react-reveal'
+import {
+    Fade,
+    Flip,
+    Rotate,
+    Zoom,
+    Bounce,
+    Roll
+} from 'react-reveal'
 import Designstyles from '../Components/Styles/DesignStyles';
 import { getDatabase, ref, child, set, get } from "firebase/database";
 import { initializeApp } from "firebase/app";
@@ -34,38 +36,35 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-class AffiliatePage extends Component{
+class AffiliatePage extends Component {
 
-state={
-    openQuote: false,
-    AdArray: [
-    ]
+    state = {
+        openQuote: false,
+        AdArray: [
+        ]
     }
-    componentDidMount()
-    {
-       
-             const dbRef = ref(getDatabase());
+    componentDidMount() {
+
+        const dbRef = ref(getDatabase());
+        console.log(dbRef, 'redfffff')
         get(child(dbRef, `/affiliates`)).then((snapshot) => {
-             
+
             if (snapshot.exists()) {
                 console.log(snapshot.val())
                 this.setdatainState(snapshot.val())
                 console.log(snapshot.val());
             } else {
                 console.log("No data available");
-               
+
             }
         }).catch((error) => {
             console.error(error);
-        })   
-        setTimeout(() => {
-            window.open('https://app.indoleads.com/register/publisher/dBgwsQL9yjZJblbJ','_self')
-        }, 2000);
+        })
     }
-    setdatainState=(data)=> {
+    setdatainState = (data) => {
         let arr = [];
         for (let key in data) {
-            
+
             let value = data[key]
             arr.push({
                 name: value.name,
@@ -78,70 +77,63 @@ state={
 
 
         }
-        
+
         this.setState({
-            AdArray:arr
+            AdArray: arr
         })
-       
+
     }
-openQuoteModal=()=>{
-    this.setState({
-        openQuote:true
-    })
-}
-    navigateToUzhalavan = (link) =>
-    {
-window.open(link,'_blank')
+    openQuoteModal = () => {
+        this.setState({
+            openQuote: true
+        })
     }
-    navigateToBurgerBuilder = () =>
-    {
-        window.open("https://burgerbuilder-31974.web.app/",'_blank')
+    navigateToUzhalavan = (link) => {
+        window.open(link, '_blank')
     }
-    render(){
-        const{classes}=this.props;
-        return(
+    navigateToBurgerBuilder = () => {
+        window.open("https://burgerbuilder-31974.web.app/", '_blank')
+    }
+    render() {
+        const { classes } = this.props;
+        return (
             <Grid container justify="space-around" spacing={2}>
                 {
-                   this.state.AdArray.map(item =>
-                   {
-                       const random = Math.floor(Math.random() * colorArray.length);
+                    this.state.AdArray.map(item => {
+                        const random = Math.floor(Math.random() * colorArray.length);
                         const random1 = Math.floor(Math.random() * colorArray.length);
-                       let color = colorArray[random]
-                       let color1=colorArray[random1]
-                       return (
-                           <Grid item sm={6} xs={12} md={6}  >
-                               <Paper style={{ padding:'15px',cursor:'pointer' ,borderRadius:'5px',border:`1px solid${color}`}} onClick={()=>this.navigateToUzhalavan(item.link)}>
-                               <Grid  style={{color:color1}}>
-                                   <h2 >{item.name}</h2>
-                               </Grid>
-                               <Grid>
-                                   <img src={item.img} width={200} height={200} />
-                               </Grid>
-                               <Grid>
-                                  <div className={classes.desc} style={{color:color,maxHeight:'100px',overflowY:'scroll',overflowX:'hidden'}}>
-                                   {
-                                       item.description.map(item1 =>
-                                       {
-                                           return (
-                                             
-                                <p>
-                                   {item1}
-                               </p>
+                        let color = colorArray[random]
+                        let color1 = colorArray[random1]
+                        return (
+                            <Grid item sm={6} xs={12} md={6}  >
+                                
+                                    <Grid style={{ color: 'darkgrey',cursor:'pointer' }} onClick={()=>this.navigateToUzhalavan(item.link)}>
+                                        <div style={{ display:'flex',alignItems:'center',justifyCOntent:'center' }} > 
+                                        <img src={item.img} width={100} height={100} /> 
+                                        {item.name}
+                                        </div>
+                                        {
+                                                item.description.map(item1 => {
+                                                    return (
+
+                                                        <p>
+                                                            {item1}
+                                                        </p>
+
+
+                                                    )
+                                                })
+                                            }
+                                    </Grid>
+                                    
                                
-                           
-                                           )
-                                       })
-                                   }
-                                    </div>
-                                </Grid>
-</Paper>
-                           </Grid>
-                           
+                            </Grid>
+
                         )
                     })
                 }
-               </Grid>
-               
+            </Grid>
+
         )
     }
 }
