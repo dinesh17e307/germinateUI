@@ -106,27 +106,30 @@ class AffiliatePage extends Component {
                         let color1 = colorArray[random1]
                         return (
                             <Grid item sm={6} xs={12} md={6}  >
-                                
-                                    <Grid style={{ color: 'darkgrey',cursor:'pointer' }} onClick={()=>this.navigateToUzhalavan(item.link)}>
-                                        <div style={{ display:'flex',alignItems:'center',justifyCOntent:'center' }} > 
-                                        <img src={item.img} width={100} height={100} /> 
-                                        {item.name}
-                                        </div>
-                                        {
-                                                item.description.map(item1 => {
-                                                    return (
 
-                                                        <p>
-                                                            {item1}
-                                                        </p>
+                                <Grid style={{ color: 'darkgrey', cursor: 'pointer' }} onClick={() => this.navigateToUzhalavan(item.link)}>
+                                    <div style={{ display: 'block', alignItems: 'center', justifyCOntent: 'center' }} >
+                                        <img src={item.img} width={"300px"} height={'100px'} />
+                                    </div>
+                                    {
+
+                                        < TypeWriterEffect
+                                            textStyle={{
+                                                fontFamily: 'Red Hat Display',
+                                                color: 'green',
+                                                fontWeight: 500,
+                                                fontSize: '1em',
+                                            }}
+                                            startDelay={100}
+                                            cursorColor="#3f51b5"
+                                            multiText={[...item.description]}
+                                            multiTextDelay={1000}
+                                            typeSpeed={150}
+                                        />
+                                    }
+                                </Grid>
 
 
-                                                    )
-                                                })
-                                            }
-                                    </Grid>
-                                    
-                               
                             </Grid>
 
                         )
