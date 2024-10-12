@@ -21,14 +21,18 @@ const custQuotes = [
   'Customer Interaction in your Absence', "Customer's compatability"
   , 'Ease of Getting More information', 'Reach of business Tremendously']
 const DigiQuotes = [
-  'Increased Engagement', 'Effective Targeting', 'Lower Cost ,mutable contents', 'Reaches each and every corners'
+  'Survey forms', 'MCQ forms', 'Registration forms', 'Quote forms', 'Emails'
 ]
 class Home extends Component {
-  componentDidMount() { }
+  componentDidMount() {
+
+    // window.open(`/design`,"_self")
+  }
   render() {
     const { classes } = this.props;
+
     return (
-      <Grid container lg={12} md={12} xs={12} >
+      <Grid container lg={12} md={12} xs={12} style={{ margin: '10px' }} >
         <Grid item lg={12} md={12} xs={12}>
           <p style={{
             fontFamily: 'Red Hat Display',
@@ -36,13 +40,13 @@ class Home extends Component {
             fontWeight: 500,
             fontSize: '2em',
           }}>
-            My portfolio
+            My portfolio <span style={{color:'green',fontSize:'15px'}}> Navigate to products page for more details and links</span>
 
           </p>
         </Grid>
-        <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '15px' }}>
-          <AffiliatePage />
-
+        <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '15px',color:'green' }}>
+         <AffiliatePage />
+        
         </Grid>
         <Fade top>
           <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '15px' }}>
@@ -50,37 +54,20 @@ class Home extends Component {
             <Grid container lg={12} md={12} xs={12}>
               <Grid item lg={6} md={6} xs={12} style={{ width: '100%', }}>
 
-                <p style={{ fontSize: '20px', }}><TypeWriterEffect
-                  textStyle={{
-                    fontFamily: 'Red Hat Display',
-                    color: '#2196f3',
-                    fontWeight: 500,
-                    fontSize: '1em',
-                  }}
-                  startDelay={100}
-                  cursorColor="#3f51b5"
-                  multiText={[
-                    'A journey towards Digital communication',
-                    'A small Business May needs ',
-                    'Lets try with us',
-                    'Get Static website,for Your Business',
-                    'Get Customized website as you like......',
-
-                  ]}
-                  multiTextDelay={1000}
-                  typeSpeed={150}
-                /></p>
-                <p className={classes.content}>Establish your website for branding your products , Let's connect via online globaly</p>
-                <p className={classes.content}>Your Business will Reach Digitally ,get Customer better than ever</p>
+                <p className={classes.heading}>A Former's Portal</p>
+                <p className={classes.content}>Developed for Internal use.</p>
+                <p className={classes.content}>where we can get consolidated reports of weekly income.</p>
+                <p className={classes.content}>Add Daily quantity of farmer's products like<span style={{ color: 'red' }}> (flower production,milk)</span></p>
+                <p className={classes.content}>Bidding concept, where we can run bid by using this portal.</p>
               </Grid>
 
               <Grid item lg={6} md={6} xs={12} style={{ marginBottom: '15px' }}>
-                <img style={{ borderRadius: '5px' }} src='/images/design8.gif' width="100%" />
+                <img style={{ borderRadius: '15px' }} src='/images/income1.png' width="100%" />
               </Grid>
             </Grid>
           </Grid>
         </Fade>
-        <Grid container lg={11} xs={12} style={{ justifyContent: 'space-between', marginBottom: '15px' }} >
+        {/* <Grid container lg={11} xs={12} style={{ justifyContent: 'space-between', marginBottom: '15px' }} >
           <Counter maxCount={97} sty={{ fontSize: 'xxx-large', margin: 'auto', fontFamily: 'Times New Roamn', fontWeight: 700, color: 'blue', width: '100px', textAlign: 'center' }}
             content={"Clear description of who you are. From the moment a client or customer visits your website, Increases in leads to customer percent"}
             bg={'/images/dg6.png'}
@@ -96,18 +83,13 @@ class Home extends Component {
             duration={10}
             decimal={4}
           />
-        </Grid>
+        </Grid> */}
         <Fade right>
           <Hidden mdUp>
             <Grid item lg={12} md={12} xs={12}  >
               <Grid container lg={12} md={12} xs={12}>
                 <Grid item lg={6} md={6} xs={12}>
-                  <p className={classes.heading}>Everything goes online , so try somethong else .... rather than normal</p>
-                  <p className={classes.content}>
-                    Now a days ,Digital Marketing plays a vital role for business ,Website takes major role in that , share your sites
-                    to others to get engaged with you
-
-                  </p>
+                  <p className={classes.heading}>Customize based on our needs</p>
                   {
                     DigiQuotes.map(item => {
                       return (
@@ -121,7 +103,7 @@ class Home extends Component {
                 </Grid>
 
                 <Grid item lg={6} md={6} xs={12} style={{ marginBottom: '15px' }}>
-                  <img style={{ borderRadius: '5px' }} src='/images/design3.gif' width="100%" />
+                  <img style={{ borderRadius: '15px' }} src='/images/surveyform.png' width="100%" />
                 </Grid>
               </Grid>
             </Grid>
@@ -135,26 +117,20 @@ class Home extends Component {
             <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '15px' }}>
               <Grid container lg={12} md={12} xs={12}>
                 <Grid item lg={6} md={6} xs={12}>
-
-                  <img style={{ borderRadius: '5px' }} src='/images/design3.gif' alt="logo" width="100%" />
-                </Grid>
-                <Grid item lg={6} md={6} xs={12}>
-                  <p className={classes.heading}>Everything goes online , so try something else .... rather than normal</p>
-                  <p className={classes.content}>
-                    Now a days ,Digital Marketing plays a vital role for business ,Website takes major role in that , share your sites
-                    to others to get engaged with you
-
-                  </p>
+                  <p className={classes.heading}>Dynamic form creation Engine</p>
                   {
                     DigiQuotes.map(item => {
                       return (
-                        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                        <div style={{ display: 'flex', justifyContent: 'flex-start', marginLeft: "10px" }}>
                           <img src='/images/tick.png' width={'50px'} />
                           <p className={classes.content}>{item}</p>
                         </div>
                       )
                     })
                   }
+                </Grid>
+                <Grid item lg={6} md={6} xs={12} style={{ marginBottom: '15px' }}>
+                  <img style={{ borderRadius: '15px' }} src='/images/quoteform.png' alt="logo" width="100%" />
                 </Grid>
               </Grid>
             </Grid>
@@ -163,21 +139,13 @@ class Home extends Component {
         <Fade left>
           <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '15px' }}>
             <Grid container lg={12} md={12} xs={12}>
+
               <Grid item lg={6} md={6} xs={12}>
-                <p className={classes.heading}>Ease Interact with Customers!!</p>
-                {
-                  custQuotes.map(item => {
-                    return (
-                      <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                        <img src='/images/tick.png' width={'50px'} alt="logo" />
-                        <p className={classes.content}>{item}</p>
-                      </div>
-                    )
-                  })
-                }
+
+                <img style={{ borderRadius: '15px' }} src='/images/surveyform.png' alt="logo" width="100%" />
               </Grid>
               <Grid item lg={6} md={6} xs={12} style={{ marginBottom: '15px' }}>
-                <img style={{ borderRadius: '5px' }} src='/images/design5.gif' alt="logo" width="100%" />
+                <img style={{ borderRadius: '15px' }} src='/images/gate.png' alt="logo" width="100%" />
               </Grid>
             </Grid>
           </Grid>

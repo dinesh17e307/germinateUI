@@ -24,10 +24,12 @@ function App() {
         <Hidden smDown>
         <div className='linkHeader' style={{flex:3,display:'flex',justifyContent:'space-evenly'}}>
              <p ><a className='touchlink' href="/">Home</a></p>
-              <p><a href="/design" className='touchlink'>Products</a></p>
+              <div className='container'>
+             <p><a href="/design" className='touchlink'>products</a></p>
+            <marquee  direction = "left"  style={{fontSize:'12px',fontWeight:600,color:'red'}}>for more details</marquee>
+             </div>
              <div className='container'>
              <p><a href="/request" className='touchlink'>Request your desire</a></p>
-            <marquee  direction = "left"  style={{fontSize:'12px',fontWeight:600,color:'#8142af'}}>get your Quote</marquee>
              </div>
             <p> <a href="/about" className='touchlink'>About us</a></p>
         </div>
